@@ -12,8 +12,9 @@ namespace gdproject
         private SpriteBatch spriteBatch;
 
         private State currentState;
-
         private State nextState;
+        private const int screen_Width = 1600;
+        private const int screen_Height = 750;
 
         public void ChangeState(State state)
         {
@@ -24,6 +25,8 @@ namespace gdproject
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = screen_Width;
+            graphics.PreferredBackBufferHeight = screen_Height;
             IsMouseVisible = true;
         }
 

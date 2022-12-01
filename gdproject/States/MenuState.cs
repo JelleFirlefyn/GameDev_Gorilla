@@ -21,14 +21,14 @@ namespace gdproject.States
 
             Button playGameButton = new Button(playGameText)
             {
-                Position = new Vector2(300, 250)
+                Position = new Vector2(649, 250)
             };
 
             playGameButton.Click += playGameButton_Click;
 
             Button exitGameButton = new Button(exitGameText)
             {
-                Position = new Vector2(300, 350)
+                Position = new Vector2(649, 350)
             };
 
             exitGameButton.Click += exitGameButton_Click;
