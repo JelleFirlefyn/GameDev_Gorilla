@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/exit.png","C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/exit.xnb","TextureProcessor","Texture2DContent",226278,2342497,0,1722658
+"C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Giant Gorilla Sprite Sheet.png","C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/Giant Gorilla Sprite Sheet.xnb","TextureProcessor","Texture2DContent",33298,1966165,0,0435251
+"C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/pause.png","C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/pause.xnb","TextureProcessor","Texture2DContent",219290,2342497,0,0523619
+"C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/playgame.png","C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/playgame.xnb","TextureProcessor","Texture2DContent",227942,2342497,0,0571843
