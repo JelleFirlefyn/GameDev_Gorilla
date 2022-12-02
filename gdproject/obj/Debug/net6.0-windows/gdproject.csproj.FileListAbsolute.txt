@@ -39,3 +39,4 @@ C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\exit.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\pause.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\playgame.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\menubackground.xnb
