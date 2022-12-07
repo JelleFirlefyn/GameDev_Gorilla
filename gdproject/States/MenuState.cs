@@ -1,7 +1,9 @@
-﻿using gdproject.Controls;
+﻿using gdproject.Animation;
+using gdproject.Controls;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using SharpDX.Direct3D9;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,8 @@ namespace gdproject.States
     {
         private List<Component> components;
         private Texture2D background;
+        //private Animatie danceAnimatie = new Animatie();
+        private int frameSize = 64;
 
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base (game, graphicsDevice, content)
         {
@@ -43,6 +47,10 @@ namespace gdproject.States
                 exitGameButton,
             };
 
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    danceAnimatie.AddFrame(new AnimationFrame(new Rectangle(i * frameSize, frameSize * 9, frameSize, frameSize)));
+            //}
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -52,7 +60,7 @@ namespace gdproject.States
             {
                 comp.Draw(gameTime, spriteBatch);
             }
-        
+            //spriteBatch.Draw((Texture2D)danceAnimatie, new Vector2(300, 300), Color.White);
         }
 
     public override void PostUpdate(GameTime gameTime)
