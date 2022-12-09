@@ -13,8 +13,8 @@ namespace gdproject
 
         private State currentState;
         private State nextState;
-        private const int screen_Width = 1600;
-        private const int screen_Height = 750;
+        private const int screen_Width = 1500;
+        private const int screen_Height = 800;
 
         public void ChangeState(State state)
         {
