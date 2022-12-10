@@ -64,7 +64,6 @@ namespace gdproject.States
                 comp.Draw(gameTime, spriteBatch);
             }
             spriteBatch.Draw(texture, new Rectangle(625, 150, 250,250),danceAnimatie.CurrentFrame.SourceRectangle, Color.White);
-            //spriteBatch.Draw(texture, new Vector2(625, 400),)
         }
 
     public override void PostUpdate(GameTime gameTime)
