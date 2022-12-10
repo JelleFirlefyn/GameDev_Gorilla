@@ -1,6 +1,7 @@
 # Changelog
 
 ### 10/12/2022 Finished home screen, added background to gamestate.
+ * Need to add level selector to homescreen
 
 ### Edited menu
  * Added background
