@@ -8,10 +8,12 @@
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/gamebackground.jpg</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Giant Gorilla Sprite Sheet.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/menubackground.jpg</File>
+    <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/nature-paltformer-tileset-16x16.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/pause.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/playgame.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

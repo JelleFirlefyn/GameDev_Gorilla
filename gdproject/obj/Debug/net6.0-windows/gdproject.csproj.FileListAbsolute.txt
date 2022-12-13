@@ -1,3 +1,15 @@
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.AssemblyReference.cache
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfoInputs.cache
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfo.cs
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.CoreCompileInputs.cache
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\exit.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\gamebackground.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Giant Gorilla Sprite Sheet.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\menubackground.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\nature-paltformer-tileset-16x16.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\pause.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\playgame.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\gdproject.exe
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\gdproject.deps.json
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\gdproject.runtimeconfig.json
@@ -24,20 +36,9 @@ C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\runtimes\win7-arm\native\libuv.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libuv.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libuv.dll
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.AssemblyReference.cache
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfoInputs.cache
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfo.cs
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.CoreCompileInputs.cache
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.CopyComplete
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\refint\gdproject.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.pdb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.genruntimeconfig.cache
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\ref\gdproject.dll
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Giant Gorilla Sprite Sheet.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\exit.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\pause.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\playgame.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\menubackground.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\gamebackground.xnb

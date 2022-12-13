@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/gamebackground.jpg</SourceFile>
-  <SourceTime>2022-12-10T16:36:44.287141+01:00</SourceTime>
+  <SourceTime>2022-12-10T16:45:44.4869598+01:00</SourceTime>
   <DestFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/gamebackground.xnb</DestFile>
-  <DestTime>2022-12-10T16:37:26.5962725+01:00</DestTime>
+  <DestTime>2022-12-12T16:46:01.9775475+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
