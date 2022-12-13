@@ -12,27 +12,27 @@ namespace gdproject.States.GameObjects
 {
     public class TerrainElement
     {
-        private Texture2D tileset;
-        private Rectangle srcRect;
-        private Rectangle destRect;
+        private Texture2D _tileset;
+        private Rectangle _srcRect;
+        private Rectangle _destRect;
 
         public Rectangle DestRect
         {
-            get { return destRect; }
+            get { return _destRect; }
         }
 
 
         public TerrainElement(Rectangle destRect, Texture2D tilesetTexture)
         {
-            tileset = tilesetTexture;
+            _tileset = tilesetTexture;
             int tileSize = 16;
-            this.srcRect = new Rectangle(3 * tileSize, 2 * tileSize, 3 * tileSize, 3 * tileSize);
-            this.destRect = destRect;
+            this._srcRect = new Rectangle(3 * tileSize, 2 * tileSize, 3 * tileSize, 3 * tileSize);
+            this._destRect = destRect;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(tileset, destRect, srcRect, Color.White);
+            spriteBatch.Draw(_tileset, _destRect, _srcRect, Color.White);
         }
 
     }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace gdproject.States
 {
-    public abstract class State
+    public abstract class State 
     {
         protected ContentManager content;
         protected GraphicsDevice graphicsDevice;
@@ -25,8 +25,6 @@ namespace gdproject.States
         }
 
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
-
-        public abstract void PostUpdate(GameTime gameTime);
 
         public abstract void Update(GameTime gameTime);
     }

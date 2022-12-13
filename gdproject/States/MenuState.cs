@@ -14,17 +14,17 @@ namespace gdproject.States
 {
     internal class MenuState : State
     {
-        private List<Component> components;
-        private Texture2D background;
-        private Texture2D texture;
+        private List<Component> _components;
+        private Texture2D _background;
+        private Texture2D _texture;
 
-        private Animatie danceAnimatie = new Animatie();
-        private int frameSize = 64;
+        private Animatie _danceAnimatie = new Animatie();
+        private int _frameSize = 64;
 
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base (game, graphicsDevice, content)
         {
-            texture = content.Load<Texture2D>("Giant Gorilla Sprite Sheet");
-            background = content.Load<Texture2D>("menubackground");
+            _texture = content.Load<Texture2D>("Giant Gorilla Sprite Sheet");
+            _background = content.Load<Texture2D>("menubackground");
             Texture2D playGameText = content.Load<Texture2D>("playgame");
             Texture2D exitGameText = content.Load<Texture2D>("exit");
 
@@ -43,7 +43,7 @@ namespace gdproject.States
             exitGameButton.Click += exitGameButton_Click;
 
 
-            components = new List<Component>()
+            _components = new List<Component>()
             {
                 playGameButton,
                 exitGameButton,
@@ -51,32 +51,27 @@ namespace gdproject.States
 
             for (int i = 0; i < 6; i++)
             {
-                danceAnimatie.AddFrame(new AnimationFrame(new Rectangle(i * frameSize, frameSize * 9, frameSize, frameSize)));
+                _danceAnimatie.AddFrame(new AnimationFrame(new Rectangle(i * _frameSize, _frameSize * 9, _frameSize, _frameSize)));
             }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(background, new Rectangle(0, 0, 1500, 800), Color.White);
-            foreach (var comp in components)
+            spriteBatch.Draw(_background, new Rectangle(0, 0, 1500, 800), Color.White);
+            foreach (var comp in _components)
             {
                 comp.Draw(gameTime, spriteBatch);
             }
-            spriteBatch.Draw(texture, new Rectangle(625, 150, 250,250),danceAnimatie.CurrentFrame.SourceRectangle, Color.White);
-        }
-
-    public override void PostUpdate(GameTime gameTime)
-        {
-            //remove sprites if not needed
+            spriteBatch.Draw(_texture, new Rectangle(625, 150, 250,250),_danceAnimatie.CurrentFrame.SourceRectangle, Color.White);
         }
 
         public override void Update(GameTime gameTime)
         {
-            foreach (var comp in components)
+            foreach (var comp in _components)
             {
                 comp.Update(gameTime);
             }
-            danceAnimatie.Update(gameTime);
+            _danceAnimatie.Update(gameTime);
         }
 
         private void exitGameButton_Click(object sender, EventArgs e)

@@ -8,10 +8,10 @@ namespace gdproject.States.GameObjects
 {
     internal class Map
     {
-        private List<TerrainElement> terrainElements = new List<TerrainElement>();
+        private List<TerrainElement> _terrainElements = new List<TerrainElement>();
         public List<TerrainElement> TerrainElements
         {
-            get { return terrainElements; }
+            get { return _terrainElements; }
         }
 
         private Texture2D tileset;

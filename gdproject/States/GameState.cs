@@ -8,24 +8,24 @@ namespace gdproject.States
 {
     public class GameState : State
     {
-        private Hero gorilla;
-        private Texture2D background;
-        private Rectangle backgroundRect;
-        Map map;
+        private Hero _gorilla;
+        private Texture2D _background;
+        private Rectangle _backgroundRect;
+        private Map _map;
 
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
             Texture2D gorillaTexture = content.Load<Texture2D>("Giant Gorilla Sprite Sheet");
-            background = content.Load<Texture2D>("gamebackground");
+            _background = content.Load<Texture2D>("gamebackground");
 
-            gorilla = new Hero(gorillaTexture, new KeyboardReader(), graphicsDevice);
+            _gorilla = new Hero(gorillaTexture, new KeyboardReader(), graphicsDevice);
 
-            backgroundRect = new Rectangle(0, 0, 1500, 800);
+            _backgroundRect = new Rectangle(0, 0, 1500, 800);
 
-            map = new Map(content.Load<Texture2D>("nature-paltformer-tileset-16x16"));
+            _map = new Map(content.Load<Texture2D>("nature-paltformer-tileset-16x16"));
 
-            map.Generate(new bool[,]
+            _map.Generate(new bool[,]
             {
                 { false, false,false, false, false, false,false, false, false, false, false, false, false, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
                 { false, false, false, false, false, false,false, false, false, false, false, false, false, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
@@ -45,23 +45,18 @@ namespace gdproject.States
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(background, backgroundRect, Color.White);
-            gorilla.Draw(spriteBatch);
-            map.Draw(spriteBatch);
-        }
-
-        public override void PostUpdate(GameTime gameTime)
-        {
-
+            spriteBatch.Draw(_background, _backgroundRect, Color.White);
+            _gorilla.Draw(gameTime, spriteBatch);
+            _map.Draw(spriteBatch);
         }
 
         public override void Update(GameTime gameTime)
         {
-            gorilla.Update(gameTime);
+            _gorilla.Update(gameTime);
 
-            foreach(TerrainElement ele in map.TerrainElements)
+            foreach(TerrainElement ele in _map.TerrainElements)
             {
-                gorilla.Collision(ele.DestRect, 1500);
+                _gorilla.Collision(ele.DestRect, 1500);
             }
         }
     }

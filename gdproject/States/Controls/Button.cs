@@ -11,10 +11,10 @@ namespace gdproject.Controls
 {
     public class Button : Component
     {
-        private MouseState currentMouse;
-        private bool isHovering;
-        private MouseState previousMouse;
-        private Texture2D texture;
+        private MouseState _currentMouse;
+        private bool _isHovering;
+        private MouseState _previousMouse;
+        private Texture2D _texture;
 
         public event EventHandler Click;
         public bool Clicked { get; set; }
@@ -23,13 +23,13 @@ namespace gdproject.Controls
         public Rectangle Rectangle {
             get
             {
-                return new Rectangle((int)Position.X, (int)Position.Y, texture.Width, texture.Height);
+                return new Rectangle((int)Position.X, (int)Position.Y, _texture.Width, _texture.Height);
             }
         }
 
         public Button(Texture2D texture)
         {
-            this.texture = texture;
+            this._texture = texture;
             PenColor = Color.Black;
         }
 
@@ -37,25 +37,25 @@ namespace gdproject.Controls
         {
             Color color = Color.White;
 
-            if (isHovering) color = Color.Gray;
+            if (_isHovering) color = Color.Gray;
 
-            spriteBatch.Draw(texture, Rectangle, color);
+            spriteBatch.Draw(_texture, Rectangle, color);
         }
 
         public override void Update(GameTime gameTime)
         {
-            previousMouse = currentMouse;
-            currentMouse = Mouse.GetState();
+            _previousMouse = _currentMouse;
+            _currentMouse = Mouse.GetState();
 
-            Rectangle mouseRect = new Rectangle(currentMouse.X, currentMouse.Y, 1, 1);
+            Rectangle mouseRect = new Rectangle(_currentMouse.X, _currentMouse.Y, 1, 1);
             Console.WriteLine(mouseRect);
 
-            isHovering = false;
+            _isHovering = false;
 
             if (mouseRect.Intersects(Rectangle))
             {
-                isHovering = true;
-                if (currentMouse.LeftButton == ButtonState.Released && previousMouse.LeftButton == ButtonState.Pressed)
+                _isHovering = true;
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
                     Click?.Invoke(this, new EventArgs());
                 }

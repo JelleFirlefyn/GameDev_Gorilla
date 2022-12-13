@@ -8,25 +8,25 @@ namespace gdproject
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager graphics;
-        private SpriteBatch spriteBatch;
+        private GraphicsDeviceManager _graphics;
+        private SpriteBatch _spriteBatch;
 
-        private State currentState;
-        private State nextState;
-        private const int screen_Width = 1500;
-        private const int screen_Height = 800;
+        private State _currentState;
+        private State _nextState;
+        private const int _screen_Width = 1500;
+        private const int _screen_Height = 800;
 
         public void ChangeState(State state)
         {
-            nextState = state;
+            _nextState = state;
         }
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = screen_Width;
-            graphics.PreferredBackBufferHeight = screen_Height;
+            _graphics.PreferredBackBufferWidth = _screen_Width;
+            _graphics.PreferredBackBufferHeight = _screen_Height;
             IsMouseVisible = true;
         }
 
@@ -38,17 +38,11 @@ namespace gdproject
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            currentState = new MenuState(this, graphics.GraphicsDevice, Content);
-
-            //InitializeGameObject();
+            _currentState = new MenuState(this, _graphics.GraphicsDevice, Content);
         }
-
-        //private void InitializeGameObject()
-        //{
-        //}
 
         protected override void Update(GameTime gameTime)
         {
@@ -56,15 +50,14 @@ namespace gdproject
                 Exit();
 
             // TODO: Add your update logic here
-            if (nextState != null)
+            if (_nextState != null)
             {
-                currentState = nextState;
+                _currentState = _nextState;
 
-                nextState = null;
+                _nextState = null;
             }
 
-            currentState.Update(gameTime);
-            currentState.PostUpdate(gameTime);
+            _currentState.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -72,13 +65,12 @@ namespace gdproject
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
+            _spriteBatch.Begin();
 
             // TODO: Add your drawing code here
-            currentState.Draw(gameTime, spriteBatch);
-
+            _currentState.Draw(gameTime, _spriteBatch);
             
-            spriteBatch.End();
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }
