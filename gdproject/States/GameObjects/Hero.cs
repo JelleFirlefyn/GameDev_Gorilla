@@ -118,12 +118,12 @@ namespace gdproject.States.GameObjects
 
             if (hitBox.TouchLeftOf(newRect))
             {
-                _position.X = newRect.X - hitBox.Width - 2;
+                _position.X = newRect.X - (int)(newRect.Width * 1.5) - 10;
             }
 
             if (hitBox.TouchRightOf(newRect))
             {
-                _position.X = newRect.X + hitBox.Width + 2;
+                _position.X = newRect.X + (int)(newRect.Width * .8);
             }
 
             if (hitBox.TouchBottomOf(newRect))
