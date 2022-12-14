@@ -60,7 +60,7 @@ namespace gdproject.States
             spriteBatch.Draw(_background, new Rectangle(0, 0, 1500, 800), Color.White);
             foreach (var comp in _components)
             {
-                comp.Draw(gameTime, spriteBatch);
+                comp.Draw(spriteBatch);
             }
             spriteBatch.Draw(_texture, new Rectangle(625, 150, 250,250),_danceAnimatie.CurrentFrame.SourceRectangle, Color.White);
         }

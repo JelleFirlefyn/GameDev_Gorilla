@@ -14,6 +14,12 @@ namespace gdproject.States.GameObjects
             get { return _terrainElements; }
         }
 
+        private List<Coin> coins = new List<Coin>();
+        public List<Coin> Coins
+        {
+            get { return coins; }
+        }
+
         private Texture2D tileset;
 
         public Map(Texture2D tilesetTexture)
@@ -21,15 +27,22 @@ namespace gdproject.States.GameObjects
             tileset = tilesetTexture;
         }
 
-        public void Generate(bool[,] map, int size)
+        public void Generate(int[,] map, int size)
         {
             for (int x = 0; x < map.GetLength(1); x++)
             {
                 for (int y = 0; y < map.GetLength(0); y++)
                 {
-                    if (map[y,x])
+                    switch (map[y,x])
                     {
-                        TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset));
+                        case 1:
+                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset));
+                            break;
+                        case 2:
+                            Coins.Add(new Coin(new Rectangle(x * size, y * size, size, size), tileset));
+                            break;
+                        default:
+                            break;
                     }
                 }
             }
@@ -37,9 +50,14 @@ namespace gdproject.States.GameObjects
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (var elements in TerrainElements)
+            foreach (TerrainElement elements in TerrainElements)
             {
                 elements.Draw(spriteBatch);
+            }
+
+            foreach (Coin elements in Coins)
+            {
+                elements?.Draw(spriteBatch);
             }
         }
     }

@@ -33,7 +33,7 @@ namespace gdproject.Controls
             PenColor = Color.Black;
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             Color color = Color.White;
 

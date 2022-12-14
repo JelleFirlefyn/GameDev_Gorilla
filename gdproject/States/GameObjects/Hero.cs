@@ -24,6 +24,12 @@ namespace gdproject.States.GameObjects
         private IInputReader _inputReader;
         //COLLISION TESTING
         Rectangle hitBox;
+
+        public Rectangle HitBox
+        {
+            get { return hitBox; }
+        }
+
         Texture2D blokTexture;
 
 
@@ -46,15 +52,15 @@ namespace gdproject.States.GameObjects
             Move();
 
             _destRect = new Rectangle((int)_position.X, (int)_position.Y, 100, 100);
-            hitBox = new Rectangle((int)_position.X + 15, (int)_position.Y + 35, 65, 65);
+            hitBox = new Rectangle((int)_position.X + 15, (int)_position.Y + 35, 65, 60);
 
             _animatie.Update(gameTime);
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             //COLLISION TESTING
-            spriteBatch.Draw(blokTexture, hitBox, Color.Red);
+            //spriteBatch.Draw(blokTexture, hitBox, Color.Red);
         
             spriteBatch.Draw(_heroTexture, _destRect, _animatie.CurrentFrame.SourceRectangle, Color.White, 0f, new Vector2(0, 0), _spriteEffect, 0f);
         }

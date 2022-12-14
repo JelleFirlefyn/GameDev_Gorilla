@@ -25,28 +25,28 @@ namespace gdproject.States
 
             _map = new Map(content.Load<Texture2D>("nature-paltformer-tileset-16x16"));
 
-            _map.Generate(new bool[,]
+            _map.Generate(new int[,]
             {
-                { false, false,false, false, false, false,false, false, false, false, false, false, false, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false, false, false, false, false,false, false, false, false, false, false, false, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false,false, false, false, false,false, false, false, false, false, false, true, false, false, false,false, false, false, false, false,true, false, false, false, false, false, false, false, false},
-                { false, false,false, false, false, false,false, false, false, false, false, false, true, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false,true, false, false, false,false, false, false, false, false, false, true, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false },
-                { false, false,false, false, false, false,false, false, false, false, false, false, true, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false,false, false, false, false,false, false, false, false, false, false, false, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false,false, false, false, false,false, false, false, false, false, false, false, false, false, true,false, false, false, true, true,true, false, false, true, true, true, true, true, false},
-                { false, false,false, false, false, false,false, false, false, false, false, false, true, true, true, true,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false,false, false, false, false,false, false, false, false, false, false, true, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { false, false,false, false, false, false,false, false, true, true, true, true, true, false, false, false,false, false, false, false, false,false, false, false, false, false, false, false, false, false},
-                { true, false,false, false, false, false,false, false, true, false, false, false, false, false, false, false,false, false, false, false, true,true, true, false, false, false, false, false, false, false},
-                { true, true,true, false, false, true,true, true, true, false, false, false, false, false, false, false,false, false, false, false, false,false, true, true, true, true, true, false, false, false},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,1, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 1,0, 0, 0, 1, 1,1, 0, 0, 1, 1, 1, 1, 1, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 1, 1,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 2,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 1, 1, 1, 1, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 1, 0,0, 0, 0, 0,0, 0, 1, 0, 0, 0, 0, 0, 2, 0,0, 0, 0, 0, 1,1, 1, 0, 0, 0, 0, 0, 0, 0},
+                { 1, 1,1, 0, 0, 1,1, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 1, 1, 1, 1, 1, 0, 0, 0},
             }, 50);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_background, _backgroundRect, Color.White);
-            _gorilla.Draw(gameTime, spriteBatch);
+            _gorilla.Draw(spriteBatch);
             _map.Draw(spriteBatch);
         }
 
@@ -57,6 +57,17 @@ namespace gdproject.States
             foreach(TerrainElement ele in _map.TerrainElements)
             {
                 _gorilla.Collision(ele.DestRect, 1500);
+            }
+
+            for (int i = 0; i < _map.Coins.Count; i++)
+            {
+                if (_map.Coins[i] != null)
+                {
+                    if (_map.Coins[i].DestRect.Intersects(_gorilla.HitBox))
+                    {
+                        _map.Coins[i] = null;
+                    }
+                }
             }
         }
     }

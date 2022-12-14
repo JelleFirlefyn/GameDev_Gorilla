@@ -1,8 +1,3 @@
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.AssemblyReference.cache
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfoInputs.cache
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfo.cs
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.CoreCompileInputs.cache
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\exit.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\gamebackground.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Giant Gorilla Sprite Sheet.xnb
@@ -36,6 +31,11 @@ C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\runtimes\win7-arm\native\libuv.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libuv.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libuv.dll
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.AssemblyReference.cache
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfoInputs.cache
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.AssemblyInfo.cs
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.CoreCompileInputs.cache
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.csproj.CopyComplete
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.dll
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\refint\gdproject.dll
