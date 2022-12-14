@@ -27,7 +27,7 @@ namespace gdproject.States.GameObjects
 			}
 		}
 
-		public Rectangle DestRect { get; set; }
+		public Rectangle HitBox { get; set; }
 
 		public Score(ContentManager content)
 		{

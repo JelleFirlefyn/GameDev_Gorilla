@@ -16,7 +16,7 @@ namespace gdproject.States.GameObjects
         private Rectangle _srcRect;
         private Rectangle _destRect;
 
-        public Rectangle DestRect
+        public Rectangle HitBox
         {
             get { return _destRect; }
         }

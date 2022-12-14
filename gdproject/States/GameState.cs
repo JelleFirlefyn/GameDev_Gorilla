@@ -60,14 +60,14 @@ namespace gdproject.States
 
             foreach(TerrainElement ele in _map.TerrainElements)
             {
-                _gorilla.Collision(ele.DestRect, 1500);
+                _gorilla.Collision(ele.HitBox, 1500);
             }
 
             for (int i = 0; i < _map.Coins.Count; i++)
             {
                 if (_map.Coins[i] != null)
                 {
-                    if (_map.Coins[i].DestRect.Intersects(_gorilla.HitBox))
+                    if (_map.Coins[i].HitBox.Intersects(_gorilla.HitBox))
                     {
                         _map.Coins[i] = null;
                         _scoreBoard.AddPoint();

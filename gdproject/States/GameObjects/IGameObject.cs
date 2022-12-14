@@ -11,7 +11,7 @@ namespace gdproject.States.GameObjects
 {
     internal interface IGameObject
     {
-        public Rectangle DestRect
+        public Rectangle HitBox
         {
             get;
         }

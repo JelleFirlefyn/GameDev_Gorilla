@@ -15,9 +15,13 @@ namespace gdproject.States.GameObjects
         private Rectangle _srcRect;
         private Rectangle _destRect;
 
-        public Rectangle DestRect
+        public Rectangle HitBox
         {
-            get { return _destRect; }
+            get 
+            { 
+                Rectangle temp = new Rectangle(_destRect.X + 7, _destRect.Y + 5 ,_destRect.Width - 13,_destRect.Height - 10);
+                return temp; 
+            }
         }
 
         public Coin(Rectangle destRect, Texture2D tilesetTexture)
