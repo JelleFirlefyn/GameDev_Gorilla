@@ -12,6 +12,7 @@ namespace gdproject.States
         private Texture2D _background;
         private Rectangle _backgroundRect;
         private Map _map;
+        private Score _scoreBoard;
 
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
@@ -27,20 +28,22 @@ namespace gdproject.States
 
             _map.Generate(new int[,]
             {
-                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+               { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0,1, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 1,0, 0, 0, 1, 1,1, 0, 0, 1, 1, 1, 1, 1, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 2, 0, 0, 0},
+                { 0, 0,1, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 2, 0, 0, 0 },
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 2, 0, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 2, 2, 2, 0, 0},
+                { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 2, 0, 0, 0, 1,0, 0, 0, 1, 1,1, 0, 0, 1, 1, 1, 1, 1, 0},
                 { 0, 0,0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 1, 1, 1,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0,0, 0, 0, 2,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0,0, 0, 0, 2,0, 0, 0, 0, 0, 0, 1, 0, 0, 0,0, 0, 0, 0, 0,2, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0,0, 0, 0, 0,0, 0, 1, 1, 1, 1, 1, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 1, 0,0, 0, 0, 0,0, 0, 1, 0, 0, 0, 0, 0, 2, 0,0, 0, 0, 0, 1,1, 1, 0, 0, 0, 0, 0, 0, 0},
                 { 1, 1,1, 0, 0, 1,1, 1, 1, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 1, 1, 1, 1, 1, 0, 0, 0},
             }, 50);
+
+            _scoreBoard = new Score(content);   
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -48,6 +51,7 @@ namespace gdproject.States
             spriteBatch.Draw(_background, _backgroundRect, Color.White);
             _gorilla.Draw(spriteBatch);
             _map.Draw(spriteBatch);
+            _scoreBoard.Draw(spriteBatch);
         }
 
         public override void Update(GameTime gameTime)
@@ -66,6 +70,7 @@ namespace gdproject.States
                     if (_map.Coins[i].DestRect.Intersects(_gorilla.HitBox))
                     {
                         _map.Coins[i] = null;
+                        _scoreBoard.AddPoint();
                     }
                 }
             }
