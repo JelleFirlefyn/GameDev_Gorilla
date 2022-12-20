@@ -139,7 +139,7 @@ namespace gdproject.States.GameObjects
 
             if (_position.X < 0) _position.X = 0;
             if (_position.X > screenWidth - hitBox.Width) _position.X = screenWidth - hitBox.Width;
-            if (_position.Y < 0) _velocity.Y = 1f;
+            if (_position.Y + 90 < 0) _velocity.Y = 1f;
             if (_position.Y > 700 - hitBox.Height) _position.Y = 700 - hitBox.Height;
         }
     }
