@@ -49,3 +49,7 @@ C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\GameAssets\Giant Gorilla Sprite Sheet.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\GameAssets\nature-paltformer-tileset-16x16.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Arial.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level1.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level2.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\back.xnb

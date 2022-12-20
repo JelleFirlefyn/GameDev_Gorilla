@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/exit.png</SourceFile>
-  <SourceTime>2022-12-01T11:43:15.1227391+01:00</SourceTime>
-  <DestFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/Buttons/exit.xnb</DestFile>
-  <DestTime>2022-12-20T13:42:24.4150302+01:00</DestTime>
+  <SourceFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/level.png</SourceFile>
+  <SourceTime>2022-12-20T13:32:36.0323871+01:00</SourceTime>
+  <DestFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/Content/Buttons/level.xnb</DestFile>
+  <DestTime>2022-12-20T13:36:16.2205072+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -3,12 +3,8 @@ using gdproject.Controls;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using SharpDX.Direct3D9;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace gdproject.States
 {
@@ -23,21 +19,29 @@ namespace gdproject.States
 
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base (game, graphicsDevice, content)
         {
-            _texture = content.Load<Texture2D>("Giant Gorilla Sprite Sheet");
-            _background = content.Load<Texture2D>("menubackground");
-            Texture2D playGameText = content.Load<Texture2D>("playgame");
-            Texture2D exitGameText = content.Load<Texture2D>("exit");
+            _texture = content.Load<Texture2D>("GameAssets/Giant Gorilla Sprite Sheet");
+            _background = content.Load<Texture2D>("Backgrounds/menubackground");
+            Texture2D playGameText = content.Load<Texture2D>("Buttons/playgame");
+            Texture2D levelText = content.Load<Texture2D>("Buttons/level");
+            Texture2D exitGameText = content.Load<Texture2D>("Buttons/exit");
 
             Button playGameButton = new Button(playGameText)
             {
-                Position = new Vector2(625, 500)
+                Position = new Vector2(625, 490)
             };
 
             playGameButton.Click += playGameButton_Click;
 
+            Button levelButton = new Button(levelText)
+            {
+                Position = new Vector2(625, 570)
+            };
+
+            levelButton.Click += levelButton_Click;
+
             Button exitGameButton = new Button(exitGameText)
             {
-                Position = new Vector2(625, 600)
+                Position = new Vector2(625, 650)
             };
 
             exitGameButton.Click += exitGameButton_Click;
@@ -46,6 +50,7 @@ namespace gdproject.States
             _components = new List<Component>()
             {
                 playGameButton,
+                levelButton,
                 exitGameButton,
             };
 
@@ -79,9 +84,14 @@ namespace gdproject.States
             System.Environment.Exit(1);
         }
 
+        private void levelButton_Click(object sender, EventArgs e)
+        {
+            game.ChangeState(new LevelSelectorState(game, graphicsDevice, content));
+        }
+
         private void playGameButton_Click(object sender, EventArgs e)
         {
-            game.ChangeState(new GameState(game, graphicsDevice, content));
+            game.ChangeState(new GameState(game, graphicsDevice, content, 1));
         }
     }
 }
