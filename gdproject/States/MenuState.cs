@@ -12,14 +12,15 @@ namespace gdproject.States
     {
         private List<Component> _components;
         private Texture2D _background;
-        private Texture2D _texture;
+        private Texture2D _gorillaTexture;
 
         private Animatie _danceAnimatie = new Animatie();
+        private Animatie _growlAnimatie = new Animatie();
         private int _frameSize = 64;
 
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base (game, graphicsDevice, content)
         {
-            _texture = content.Load<Texture2D>("GameAssets/Giant Gorilla Sprite Sheet");
+            _gorillaTexture = content.Load<Texture2D>("GameAssets/Giant Gorilla Sprite Sheet");
             _background = content.Load<Texture2D>("Backgrounds/menubackground");
             Texture2D playGameText = content.Load<Texture2D>("Buttons/playgame");
             Texture2D levelText = content.Load<Texture2D>("Buttons/level");
@@ -58,6 +59,11 @@ namespace gdproject.States
             {
                 _danceAnimatie.AddFrame(new AnimationFrame(new Rectangle(i * _frameSize, _frameSize * 9, _frameSize, _frameSize)));
             }
+
+            for (int i = 0; i < 4; i++)
+            {
+                _growlAnimatie.AddFrame(new AnimationFrame(new Rectangle(i * _frameSize, _frameSize * 6, _frameSize, _frameSize)));
+            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -67,7 +73,9 @@ namespace gdproject.States
             {
                 comp.Draw(spriteBatch);
             }
-            spriteBatch.Draw(_texture, new Rectangle(625, 150, 250,250),_danceAnimatie.CurrentFrame.SourceRectangle, Color.White);
+            spriteBatch.Draw(_gorillaTexture, new Rectangle(625, 150, 250,250),_danceAnimatie.CurrentFrame.SourceRectangle, Color.White);
+            spriteBatch.Draw(_gorillaTexture, new Rectangle(300, 590, 150, 150), _growlAnimatie.CurrentFrame.SourceRectangle, Color.White);
+            spriteBatch.Draw(_gorillaTexture, new Rectangle(1050, 590, 150, 150), _growlAnimatie.CurrentFrame.SourceRectangle, Color.White, 0f, new Vector2(0,0), SpriteEffects.FlipHorizontally, 0f);
         }
 
         public override void Update(GameTime gameTime)
@@ -77,6 +85,7 @@ namespace gdproject.States
                 comp.Update(gameTime);
             }
             _danceAnimatie.Update(gameTime);
+            _growlAnimatie.Update(gameTime);
         }
 
         private void exitGameButton_Click(object sender, EventArgs e)
