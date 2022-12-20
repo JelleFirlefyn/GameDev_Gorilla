@@ -75,6 +75,10 @@ namespace gdproject.States
             if (CurrentLevel == 1)
             {
                 _map1.Draw(spriteBatch);
+                if (_scoreBoard.ScorePoints == 10)
+                {
+                    CurrentLevel = 2;
+                }
             }
             if (CurrentLevel == 2)
             {
