@@ -21,15 +21,15 @@ namespace gdproject.States
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, int level) : base(game, graphicsDevice, content)
         {
-            Texture2D gorillaTexture = content.Load<Texture2D>("Giant Gorilla Sprite Sheet");
-            _background = content.Load<Texture2D>("gamebackground");
+            Texture2D gorillaTexture = content.Load<Texture2D>("GameAssets/Giant Gorilla Sprite Sheet");
+            _background = content.Load<Texture2D>("Backgrounds/gamebackground");
 
             _gorilla = new Hero(gorillaTexture, new KeyboardReader(), graphicsDevice);
 
             _backgroundRect = new Rectangle(0, 0, 1500, 800);
 
-            _map1 = new Map(content.Load<Texture2D>("nature-paltformer-tileset-16x16"));
-            _map2 = new Map(content.Load<Texture2D>("nature-paltformer-tileset-16x16"));
+            _map1 = new Map(content.Load<Texture2D>("GameAssets/nature-paltformer-tileset-16x16"));
+            _map2 = new Map(content.Load<Texture2D>("GameAssets/nature-paltformer-tileset-16x16"));
 
             CurrentLevel = level;
 
@@ -44,7 +44,7 @@ namespace gdproject.States
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 2, 2, 2, 2, 2, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
                 { 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
@@ -108,7 +108,17 @@ namespace gdproject.States
 
             foreach (TerrainElement ele in tempMap.TerrainElements)
             {
-                _gorilla.Collision(ele.HitBox, 1500);
+                if (ele.BlockKind == Block.spike)
+                {
+                    if (_gorilla.SpikeCollision(ele.HitBox))
+                    {
+                        System.Environment.Exit(1);
+                    }
+                }
+                else
+                {
+                    _gorilla.Collision(ele.HitBox, 1500);
+                }
             }
 
             for (int i = 0; i < tempMap.Coins.Count; i++)

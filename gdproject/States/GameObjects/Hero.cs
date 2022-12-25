@@ -116,6 +116,13 @@ namespace gdproject.States.GameObjects
 
         public void Collision(Rectangle newRect, int screenWidth)
         {
+            BlockCollision(newRect);
+
+            ScreenCollision(screenWidth);
+        }
+
+        private void BlockCollision(Rectangle newRect)
+        {
             if (hitBox.TouchTopOf(newRect))
             {
                 hitBox.Y = newRect.Y - hitBox.Height;
@@ -137,11 +144,23 @@ namespace gdproject.States.GameObjects
             {
                 _velocity.Y = 1f;
             }
+        }
 
+        private void ScreenCollision(int screenWidth)
+        {
             if (_position.X < 0) _position.X = 0;
             if (_position.X > screenWidth - hitBox.Width) _position.X = screenWidth - hitBox.Width;
             if (_position.Y + 90 < 0) _velocity.Y = 1f;
             if (_position.Y > 700 - hitBox.Height) _position.Y = 700 - hitBox.Height;
+        }
+
+        public bool SpikeCollision(Rectangle newRect)
+        {
+            if (hitBox.TouchTopOf(newRect) || hitBox.TouchLeftOf(newRect) || hitBox.TouchRightOf(newRect) || hitBox.TouchBottomOf(newRect))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

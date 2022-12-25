@@ -1,10 +1,14 @@
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\exit.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\gamebackground.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Giant Gorilla Sprite Sheet.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\menubackground.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\nature-paltformer-tileset-16x16.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\pause.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\playgame.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Arial.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Backgrounds\gamebackground.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Backgrounds\menubackground.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\back.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\exit.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level1.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level2.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\playgame.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\GameAssets\Giant Gorilla Sprite Sheet.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\GameAssets\nature-paltformer-tileset-16x16.xnb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\gdproject.exe
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\gdproject.deps.json
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\gdproject.runtimeconfig.json
@@ -42,14 +46,3 @@ C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.pdb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.genruntimeconfig.cache
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\ref\gdproject.dll
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Backgrounds\gamebackground.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Backgrounds\menubackground.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\exit.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\playgame.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\GameAssets\Giant Gorilla Sprite Sheet.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\GameAssets\nature-paltformer-tileset-16x16.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Arial.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level1.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\level2.xnb
-C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\back.xnb

@@ -38,10 +38,13 @@ namespace gdproject.States.GameObjects
                     switch (map[y,x])
                     {
                         case 1:
-                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, 0));
+                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, Block.brick));
                             break;
                         case 2:
-                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, 1));
+                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, Block.grass));
+                            break;
+                        case 3:
+                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, Block.spike));
                             break;
                         case 4:
                             Coins.Add(new Coin(new Rectangle(x * size, y * size, size, size), tileset));
