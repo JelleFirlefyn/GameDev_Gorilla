@@ -26,7 +26,7 @@ namespace gdproject.States
         public LevelSelectorState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
             _gorillaTexture = content.Load<Texture2D>("GameAssets/Giant Gorilla Sprite Sheet");
-            _background = content.Load<Texture2D>("menubackground");
+            _background = content.Load<Texture2D>("Backgrounds/menubackground");
             Texture2D levelOneText = content.Load<Texture2D>("Buttons/level1");
             Texture2D levelTwoText = content.Load<Texture2D>("Buttons/level2");
             Texture2D backButtonText = content.Load<Texture2D>("Buttons/back");

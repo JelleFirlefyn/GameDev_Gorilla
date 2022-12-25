@@ -46,3 +46,7 @@ C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.pdb
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\gdproject.genruntimeconfig.cache
 C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\obj\Debug\net6.0-windows\ref\gdproject.dll
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Backgrounds\gameoverbackground.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Backgrounds\victorybackground.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\menu.xnb
+C:\Users\jelle\Documents\AP\SEM-3\Game Development\gdproject\gdproject\bin\Debug\net6.0-windows\Content\Buttons\playagain.xnb

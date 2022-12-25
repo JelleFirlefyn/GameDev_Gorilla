@@ -6,17 +6,25 @@
   <SourceFiles>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Arial.spritefont</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Backgrounds/gamebackground.jpg</File>
+    <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Backgrounds/gameoverbackground.jpg</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Backgrounds/menubackground.jpg</File>
+    <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Backgrounds/victorybackground.jpg</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/back.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/exit.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/level.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/level1.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/level2.png</File>
+    <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/menu.png</File>
+    <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/playagain.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/Buttons/playgame.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/GameAssets/Giant Gorilla Sprite Sheet.png</File>
     <File>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/GameAssets/nature-paltformer-tileset-16x16.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

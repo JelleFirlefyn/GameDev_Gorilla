@@ -44,7 +44,7 @@ namespace gdproject.States
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 2, 2, 2, 2, 2, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 4, 0, 0, 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
                 { 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
@@ -78,10 +78,6 @@ namespace gdproject.States
             if (CurrentLevel == 1)
             {
                 _map1.Draw(spriteBatch);
-                if (_scoreBoard.ScorePoints == 10)
-                {
-                    CurrentLevel = 2;
-                }
             }
             if (CurrentLevel == 2)
             {
@@ -100,25 +96,28 @@ namespace gdproject.States
             if (CurrentLevel == 1)
             {
                 tempMap = _map1;
+
+                if (_scoreBoard.LvlScorePoints == 10)
+                {
+                    CurrentLevel = 2;
+                }
             }
             if (CurrentLevel == 2)
             {
                 tempMap = _map2;
+                if (_scoreBoard.LvlScorePoints == 10 && _scoreBoard.ScorePoints != 10)
+                {
+                    game.ChangeState(new EndGameState(game, graphicsDevice, content, false));
+                }
             }
 
             foreach (TerrainElement ele in tempMap.TerrainElements)
             {
                 if (ele.BlockKind == Block.spike)
                 {
-                    if (_gorilla.SpikeCollision(ele.HitBox))
-                    {
-                        System.Environment.Exit(1);
-                    }
+                    if (_gorilla.SpikeCollision(ele.HitBox)) game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
                 }
-                else
-                {
-                    _gorilla.Collision(ele.HitBox, 1500);
-                }
+                else _gorilla.Collision(ele.HitBox, 1500);
             }
 
             for (int i = 0; i < tempMap.Coins.Count; i++)
