@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace gdproject.States.GameObjects
+namespace gdproject.States.GameObjects.Score
 {
     internal class Coin : IGameObject
     {
@@ -17,10 +17,10 @@ namespace gdproject.States.GameObjects
 
         public Rectangle HitBox
         {
-            get 
-            { 
-                Rectangle temp = new Rectangle(_destRect.X + 7, _destRect.Y + 5 ,_destRect.Width - 13,_destRect.Height - 10);
-                return temp; 
+            get
+            {
+                Rectangle temp = new Rectangle(_destRect.X + 7, _destRect.Y + 5, _destRect.Width - 13, _destRect.Height - 10);
+                return temp;
             }
         }
 
@@ -28,8 +28,8 @@ namespace gdproject.States.GameObjects
         {
             _tileset = tilesetTexture;
             int tileSize = 16;
-            this._srcRect = new Rectangle(5 * tileSize, 7 * tileSize, 1 * tileSize, 1 * tileSize);
-            this._destRect = destRect;
+            _srcRect = new Rectangle(5 * tileSize, 7 * tileSize, 1 * tileSize, 1 * tileSize);
+            _destRect = destRect;
         }
 
         public void Draw(SpriteBatch spriteBatch)

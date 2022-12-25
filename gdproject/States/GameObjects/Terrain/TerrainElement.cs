@@ -8,7 +8,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace gdproject.States.GameObjects
+namespace gdproject.States.GameObjects.Terrain
 {
     public class TerrainElement : IGameObject
     {
@@ -22,12 +22,14 @@ namespace gdproject.States.GameObjects
         }
 
 
-        public TerrainElement(Rectangle destRect, Texture2D tilesetTexture)
+        public TerrainElement(Rectangle destRect, Texture2D tilesetTexture, int blockIdx)
         {
             _tileset = tilesetTexture;
             int tileSize = 16;
-            this._srcRect = new Rectangle(3 * tileSize, 2 * tileSize, 3 * tileSize, 3 * tileSize);
-            this._destRect = destRect;
+
+            if (blockIdx == 1) _srcRect = new Rectangle(0, 0, 3 * tileSize, 3 * tileSize);
+            else _srcRect = new Rectangle(3 * tileSize, 2 * tileSize, 3 * tileSize, 3 * tileSize);
+            _destRect = destRect;
         }
 
         public void Draw(SpriteBatch spriteBatch)

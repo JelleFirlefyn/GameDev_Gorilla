@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using gdproject.States.GameObjects.Score;
+using gdproject.States.GameObjects.Terrain;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -36,9 +38,12 @@ namespace gdproject.States.GameObjects
                     switch (map[y,x])
                     {
                         case 1:
-                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset));
+                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, 0));
                             break;
                         case 2:
+                            TerrainElements.Add(new TerrainElement(new Rectangle(x * size, y * size, size, size), tileset, 1));
+                            break;
+                        case 4:
                             Coins.Add(new Coin(new Rectangle(x * size, y * size, size, size), tileset));
                             break;
                         default:
