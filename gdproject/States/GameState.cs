@@ -5,6 +5,7 @@ using gdproject.States.GameObjects.Terrain;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace gdproject.States
 {
@@ -16,6 +17,8 @@ namespace gdproject.States
         private Map _map1;
         private Map _map2;
         private Score _scoreBoard;
+        private Rock _rock;
+
         public int CurrentLevel { get; set; }
 
 
@@ -68,13 +71,22 @@ namespace gdproject.States
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
            }, 50);
 
-            _scoreBoard = new Score(content);   
+            _scoreBoard = new Score(content);
+
+            _rock = new Rock(content);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_background, _backgroundRect, Color.White);
             _gorilla.Draw(spriteBatch);
+            DrawMap(spriteBatch);
+            _scoreBoard.Draw(spriteBatch);
+            _rock.Draw(spriteBatch);
+        }
+
+        private void DrawMap(SpriteBatch spriteBatch)
+        {
             if (CurrentLevel == 1)
             {
                 _map1.Draw(spriteBatch);
@@ -83,14 +95,18 @@ namespace gdproject.States
             {
                 _map2.Draw(spriteBatch);
             }
-            
-            _scoreBoard.Draw(spriteBatch);
         }
 
         public override void Update(GameTime gameTime)
         {
             _gorilla.Update(gameTime);
+            Map tempMap = UpdateLevel();
+            CollisionChecks(tempMap);
+            _rock.Update(gameTime);
+        }
 
+        private Map UpdateLevel()
+        {
             Map tempMap = null;
 
             if (CurrentLevel == 1)
@@ -111,6 +127,11 @@ namespace gdproject.States
                 }
             }
 
+            return tempMap;
+        }
+
+        private void CollisionChecks(Map tempMap)
+        {
             foreach (TerrainElement ele in tempMap.TerrainElements)
             {
                 if (ele.BlockKind == Block.spike)

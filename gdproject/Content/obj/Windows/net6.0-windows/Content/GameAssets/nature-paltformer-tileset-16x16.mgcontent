@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/GameAssets/nature-paltformer-tileset-16x16.png</SourceFile>
-  <SourceTime>2022-12-25T01:39:01.7245838+01:00</SourceTime>
+  <SourceTime>2022-12-25T22:40:50.4556891+01:00</SourceTime>
   <DestFile>C:/Users/jelle/Documents/AP/SEM-3/Game Development/gdproject/gdproject/Content/bin/Windows/Content/GameAssets/nature-paltformer-tileset-16x16.xnb</DestFile>
-  <DestTime>2022-12-25T02:04:41.2702042+01:00</DestTime>
+  <DestTime>2022-12-26T01:22:45.2386878+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -23,6 +23,14 @@ namespace gdproject.States.GameObjects
         private SpriteEffects _spriteEffect;
         private bool _hasJumped;
         private IInputReader _inputReader;
+
+        public Vector2 Position
+        {
+            get { return _position; }
+            set { _position = value; }
+        }
+
+
         //COLLISION TESTING
         Rectangle hitBox;
 
