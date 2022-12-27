@@ -11,12 +11,19 @@ namespace gdproject.States.GameObjects
         private Rectangle _destRect;
         private Rectangle _srcRect;
         private float _rotation;
+        private static Random rnd = new Random();
 
-        public Rectangle DestRect
+        public Rectangle HitBox
         {
-            get { return _destRect; }
-            set { _destRect = value; }
+            get 
+            {
+                Rectangle temp = new Rectangle(_destRect.X, _destRect.Y, _destRect.Width - 25, _destRect.Height - 25);
+                return temp; 
+            }
+            private set { _destRect = value; }
         }
+
+        public bool isFalling { get; set; }
 
 
         public Rock(ContentManager content)
@@ -25,7 +32,7 @@ namespace gdproject.States.GameObjects
 
             int tileSize = 16;
             _srcRect = new Rectangle(2 * tileSize, 8 * tileSize, 3 * tileSize, 3 * tileSize);
-            _destRect = new Rectangle(700, 400, 50, 50);
+            _destRect = new Rectangle(-700, 400, 50, 50);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -35,7 +42,28 @@ namespace gdproject.States.GameObjects
 
         public override void Update(GameTime gameTime)
         {
-            _rotation += 0.1f;
+            if (isFalling)
+            {
+                _destRect.Y += 5;
+                _rotation += 0.01f;
+                _rotation += _rotation * 0.01f;
+            }
+            else
+            {
+                _rotation = 0;
+            }
+
+            if (_destRect.Y > 1600) isFalling = false;
+        }
+
+        public void Spawn(int gorillaPosition)
+        {
+            if (rnd.Next(0,100) == 5 && !isFalling)
+            {
+                _destRect.X = rnd.Next(-10, 10) + gorillaPosition;
+                _destRect.Y = -100;
+                isFalling = true;
+            }
         }
     }
 }
