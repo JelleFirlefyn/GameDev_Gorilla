@@ -18,6 +18,7 @@ namespace gdproject.States
         private Map _map2;
         private Score _scoreBoard;
         private Rock _rock;
+        private Barrel _barrel;
 
         public int CurrentLevel { get; set; }
 
@@ -74,15 +75,18 @@ namespace gdproject.States
             _scoreBoard = new Score(content);
 
             _rock = new Rock(content);
+
+            _barrel = new Barrel(content);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_background, _backgroundRect, Color.White);
-            _gorilla.Draw(spriteBatch);
             DrawMap(spriteBatch);
+            _gorilla.Draw(spriteBatch);
             _scoreBoard.Draw(spriteBatch);
             _rock.Draw(spriteBatch);
+            _barrel?.Draw(spriteBatch);
         }
 
         private void DrawMap(SpriteBatch spriteBatch)
@@ -104,8 +108,10 @@ namespace gdproject.States
             CollisionTerrain(tempMap);
             CollisionCoins(tempMap);
             CollisionRock();
+            CollisionBarrel();
             _rock.Update(gameTime);
             _rock.Spawn((int)_gorilla.Position.X);
+            _barrel?.Update(gameTime);
         }
 
         private Map UpdateLevel()
@@ -165,6 +171,23 @@ namespace gdproject.States
             if (_rock.HitBox.Intersects(_gorilla.HitBox) && _rock.isFalling)
             {
                 game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
+            }
+        }
+
+        private void CollisionBarrel()
+        {
+            if (_barrel != null)
+            {
+                if (RectangleCollision.TouchBottomOf(_gorilla.HitBox, _barrel.HitBox)
+                || RectangleCollision.TouchRightOf(_gorilla.HitBox, _barrel.HitBox)
+                || RectangleCollision.TouchLeftOf(_gorilla.HitBox, _barrel.HitBox))
+                {
+                    game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
+                }
+                if (RectangleCollision.TouchTopOf(_gorilla.HitBox, _barrel.HitBox))
+                {
+                    _barrel = null;
+                }
             }
         }
     }
