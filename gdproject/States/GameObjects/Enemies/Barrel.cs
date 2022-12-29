@@ -54,12 +54,17 @@ namespace gdproject.States.GameObjects.Enemies
             _destRect.X -= _speed;
         }
 
-        public bool Collision(Rectangle r, Barrel b)
+        public bool SideCollision(Rectangle r)
         {
-            if (RectangleCollision.TouchTopOf(r, HitBox)) b = null;
             if (RectangleCollision.TouchBottomOf(r, HitBox)
                 || RectangleCollision.TouchRightOf(r, HitBox)
                 || RectangleCollision.TouchLeftOf(r, HitBox)) return true;
+            return false;
+        }
+
+        public bool TopCollision(Rectangle r)
+        {
+            if (RectangleCollision.TouchTopOf(r, HitBox)) return true;
             return false;
         }
     }

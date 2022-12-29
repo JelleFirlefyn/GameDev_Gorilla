@@ -145,22 +145,16 @@ namespace gdproject.States
 
         private void CollisionBarrel()
         {
-            //if (_barrel != null)
-            //{
-            //    if (RectangleCollision.TouchBottomOf(_gorilla.HitBox, _barrel.HitBox)
-            //    || RectangleCollision.TouchRightOf(_gorilla.HitBox, _barrel.HitBox)
-            //    || RectangleCollision.TouchLeftOf(_gorilla.HitBox, _barrel.HitBox))
-            //    {
-            //        game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
-            //    }
-            //    if (RectangleCollision.TouchTopOf(_gorilla.HitBox, _barrel.HitBox))
-            //    {
-            //        _barrel = null;
-            //    }
-            //}
-            if (_barrel.Collision(_gorilla.HitBox, _barrel))
+            if (_barrel != null)
             {
-                game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
+                if (_barrel.SideCollision(_gorilla.HitBox))
+                {
+                    game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
+                }
+                if (_barrel.TopCollision(_gorilla.HitBox))
+                {
+                    _barrel = null;
+                }
             }
 
         }

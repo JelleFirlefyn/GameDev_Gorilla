@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+//Bron: https://youtu.be/l0WS5SvKdY4
+
 
 namespace gdproject.States.GameObjects.Terrain
 {

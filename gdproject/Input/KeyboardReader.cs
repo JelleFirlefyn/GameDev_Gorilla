@@ -15,6 +15,10 @@ namespace gdproject.Input
         public Movement ReadInput()
         {
             KeyboardState state = Keyboard.GetState();
+            if (state.IsKeyDown(Keys.Up))
+            {
+                return Movement.up;
+            }
             if (state.IsKeyDown(Keys.Left))
             {
                 return Movement.left;
@@ -22,10 +26,6 @@ namespace gdproject.Input
             if (state.IsKeyDown(Keys.Right))
             {
                 return Movement.right;
-            }
-            if (state.IsKeyDown(Keys.Up))
-            {
-                return Movement.up;
             }
             if (state.IsKeyDown(Keys.Down))
             {
