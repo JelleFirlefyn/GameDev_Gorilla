@@ -30,17 +30,12 @@ namespace gdproject.States.GameObjects
             get { return _position; }
             set { _position = value; }
         }
-
-
-        //COLLISION TESTING
         Rectangle hitBox;
 
         public Rectangle HitBox
         {
             get { return hitBox; }
         }
-
-        Texture2D blokTexture;
 
 
         public Hero(Texture2D texture, IInputReader inputReader, GraphicsDevice graphicsDevice)
@@ -49,10 +44,6 @@ namespace gdproject.States.GameObjects
             _animatie = new AnimationManager(inputReader);
             this._inputReader = inputReader;
             _position = new Vector2(70f, 646.8f);
-            //COLLISION TESTING
-            blokTexture = new Texture2D(graphicsDevice, 1, 1);
-            blokTexture.SetData(new[] { Color.White });
-
 
             _hasJumped = true;
         }
@@ -68,10 +59,7 @@ namespace gdproject.States.GameObjects
         }
 
         public override void Draw(SpriteBatch spriteBatch)
-        {
-            //COLLISION TESTING
-            //spriteBatch.Draw(blokTexture, hitBox, Color.Red);
-        
+        {       
             spriteBatch.Draw(_heroTexture, _destRect, _animatie.CurrentFrame.SourceRectangle, Color.White, 0f, new Vector2(0, 0), _spriteEffect, 0f);
         }
 
