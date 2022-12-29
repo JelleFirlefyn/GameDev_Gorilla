@@ -28,14 +28,6 @@ namespace gdproject.States.GameObjects.Score
             }
         }
 
-        public int LvlScorePoints { 
-            get
-            {
-                if (scorePoints > 10) return scorePoints - 10;
-                return scorePoints;
-            }
-        }
-
         public Rectangle HitBox { get; set; }
 
         public Score(ContentManager content)
