@@ -20,6 +20,7 @@ namespace gdproject.States
         private Score _scoreBoard;
         private Rock _rock;
         private Barrel _barrel;
+        private List<Enemy> _enemies;
 
         public int CurrentLevel { get; set; }
 
@@ -43,9 +44,9 @@ namespace gdproject.States
 
             _scoreBoard = new Score(content);
 
-            _rock = new Rock(content);
-
-            _barrel = new Barrel(content);
+            _enemies = new List<Enemy>();
+            _enemies.Add(new Rock(content));
+            _enemies.Add(new Barrel(content));
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -54,8 +55,10 @@ namespace gdproject.States
             DrawMap(spriteBatch);
             _gorilla.Draw(spriteBatch);
             _scoreBoard.Draw(spriteBatch);
-            _rock.Draw(spriteBatch);
-            _barrel?.Draw(spriteBatch);
+            foreach (Enemy enemy in _enemies)
+            {
+                enemy?.Draw(spriteBatch);    
+            }
         }
 
         private void DrawMap(SpriteBatch spriteBatch)
@@ -76,11 +79,29 @@ namespace gdproject.States
             Map tempMap = UpdateLevel();
             CollisionTerrain(tempMap);
             CollisionCoins(tempMap);
-            CollisionRock();
-            CollisionBarrel();
-            _rock.Update(gameTime);
-            _rock.Spawn((int)_gorilla.Position.X);
-            _barrel?.Update(gameTime);
+            for (int i = 0; i < _enemies.Count; i++)
+            {
+                _enemies[i]?.Update(gameTime);
+                if (_enemies[i] is Rock)
+                {
+                    Rock temp = _enemies[i] as Rock;
+                    temp.Spawn((int)_gorilla.Position.X);
+                    CollisionRock(_enemies[i]);
+                }
+                else
+                {
+                    Barrel temp = _enemies[i] as Barrel;
+                    if (temp.SideCollision(_gorilla.HitBox))
+                    {
+                        game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
+                    }
+                    if (temp.TopCollision(_gorilla.HitBox))
+                    {
+                        _enemies.RemoveAt(i);
+                    }
+                }
+            }
+            
         }
 
         private Map UpdateLevel()
@@ -135,25 +156,27 @@ namespace gdproject.States
             }
         }
 
-        private void CollisionRock()
+        private void CollisionRock(Enemy en)
         {
-            if (_rock.HitBox.Intersects(_gorilla.HitBox) && _rock.isFalling)
+            Rock temp = en as Rock;
+            if (temp.HitBox.Intersects(_gorilla.HitBox) && temp.isFalling)
             {
                 game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
             }
         }
 
-        private void CollisionBarrel()
+        private void CollisionBarrel(Enemy en)
         {
-            if (_barrel != null)
+            Barrel temp = en as Barrel;
+            if (temp != null)
             {
-                if (_barrel.SideCollision(_gorilla.HitBox))
+                if (temp.SideCollision(_gorilla.HitBox))
                 {
                     game.ChangeState(new EndGameState(game, graphicsDevice, content, true));
                 }
-                if (_barrel.TopCollision(_gorilla.HitBox))
+                if (temp.TopCollision(_gorilla.HitBox))
                 {
-                    _barrel = null;
+                    en = null;
                 }
             }
 
