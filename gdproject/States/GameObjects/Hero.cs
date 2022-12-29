@@ -1,5 +1,6 @@
 ﻿using gdproject.Animation;
 using gdproject.Input;
+using gdproject.Interfaces;
 using gdproject.States.GameObjects.Terrain;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace gdproject.States.GameObjects
 {
-    public class Hero : Component
+    public class Hero : Component, IGameObject
     {
         private Texture2D _heroTexture;
         private AnimationManager _animatie;
@@ -84,7 +85,7 @@ namespace gdproject.States.GameObjects
 
             if(_velocity.Y < 10)
             {
-                _velocity.Y += 0.4f;
+                _velocity.Y += 0.45f;
             }
 
             if (movement == Movement.right)

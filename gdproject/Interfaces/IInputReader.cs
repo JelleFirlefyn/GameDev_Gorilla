@@ -1,11 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using gdproject.Input;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace gdproject.Input
+namespace gdproject.Interfaces
 {
     public interface IInputReader
     {

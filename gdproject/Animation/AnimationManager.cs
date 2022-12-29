@@ -1,4 +1,5 @@
 ﻿using gdproject.Input;
+using gdproject.Interfaces;
 using Microsoft.Win32.SafeHandles;
 using Microsoft.Xna.Framework;
 using System;

@@ -1,4 +1,5 @@
 ﻿using gdproject.Animation;
+using gdproject.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;

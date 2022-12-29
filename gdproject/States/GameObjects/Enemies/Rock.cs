@@ -1,26 +1,26 @@
-﻿using Microsoft.Xna.Framework;
+﻿using gdproject.Animation;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace gdproject.States.GameObjects
+namespace gdproject.States.GameObjects.Enemies
 {
-    internal class Rock : Component
+    internal class Rock : Enemy 
     {
         private Texture2D _texture;
         private Rectangle _destRect;
-        private Rectangle _srcRect;
+        private AnimationFrame _animationFrame;
         private float _rotation;
         private static Random rnd = new Random();
 
-        public Rectangle HitBox
+        public override Rectangle HitBox
         {
-            get 
+            get
             {
                 Rectangle temp = new Rectangle(_destRect.X, _destRect.Y, _destRect.Width - 25, _destRect.Height - 25);
-                return temp; 
+                return temp;
             }
-            private set { _destRect = value; }
         }
 
         public bool isFalling { get; set; }
@@ -31,13 +31,13 @@ namespace gdproject.States.GameObjects
             _texture = content.Load<Texture2D>("GameAssets/nature-paltformer-tileset-16x16");
 
             int tileSize = 16;
-            _srcRect = new Rectangle(2 * tileSize, 8 * tileSize, 3 * tileSize, 3 * tileSize);
+            _animationFrame = new AnimationFrame(new Rectangle(2 * tileSize, 8 * tileSize, 3 * tileSize, 3 * tileSize));
             _destRect = new Rectangle(-700, 400, 50, 50);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _destRect, _srcRect, Color.White, _rotation, new Vector2(25,25), SpriteEffects.None, 0f);
+            spriteBatch.Draw(_texture, _destRect, _animationFrame.SourceRectangle, Color.White, _rotation, new Vector2(25, 25), SpriteEffects.None, 0f);
         }
 
         public override void Update(GameTime gameTime)
@@ -58,7 +58,7 @@ namespace gdproject.States.GameObjects
 
         public void Spawn(int gorillaPosition)
         {
-            if (rnd.Next(0,100) == 5 && !isFalling)
+            if (rnd.Next(0, 100) == 5 && !isFalling)
             {
                 _destRect.X = rnd.Next(-10, 10) + gorillaPosition;
                 _destRect.Y = -100;
