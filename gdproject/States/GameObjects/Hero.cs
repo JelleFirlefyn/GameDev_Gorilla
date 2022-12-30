@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace gdproject.States.GameObjects
 {
-    public class Hero : Component, IGameObject
+    public class Hero : IGameObject, IGameObjectUpdate
     {
         private Texture2D _heroTexture;
         private AnimationManager _animatie;
@@ -42,7 +42,7 @@ namespace gdproject.States.GameObjects
             _hasJumped = true;
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             Move();
 
@@ -52,7 +52,7 @@ namespace gdproject.States.GameObjects
             _animatie.Update(gameTime);
         }
 
-        public override void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch)
         {       
             spriteBatch.Draw(_heroTexture, _destRect, _animatie.CurrentFrame.SourceRectangle, Color.White, 0f, new Vector2(0, 0), _spriteEffect, 0f);
         }
