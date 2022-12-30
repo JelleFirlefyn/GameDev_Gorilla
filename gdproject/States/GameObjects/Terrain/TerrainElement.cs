@@ -1,7 +1,6 @@
 ﻿using gdproject.Animation;
 using gdproject.Interfaces;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace gdproject.States.GameObjects.Terrain

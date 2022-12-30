@@ -1,9 +1,7 @@
 ﻿using gdproject.States.GameObjects.Score;
 using gdproject.States.GameObjects.Terrain;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 
 namespace gdproject.States.GameObjects

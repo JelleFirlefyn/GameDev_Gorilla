@@ -16,7 +16,6 @@ namespace gdproject.States.GameObjects.Enemies
         private Texture2D _texture;
         private Rectangle _destRect;
         private AnimationFrame _animationFrame;
-        private Rectangle _srcRect;
         private int _speed;
 
         public override Rectangle HitBox
