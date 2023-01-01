@@ -25,10 +25,6 @@ namespace gdproject.Input
             {
                 return Movement.down;
             }
-            if (state.IsKeyDown(Keys.Space))
-            {
-                return Movement.smash;
-            }
             if (state.IsKeyDown(Keys.D))
             {
                 return Movement.dance;
